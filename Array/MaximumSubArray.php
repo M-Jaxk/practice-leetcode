@@ -17,7 +17,6 @@ final class MaximumSubArray
         return $globalMax;
     }
 }
-
 echo (new MaximumSubArray)->maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) . PHP_EOL;
 echo (new MaximumSubArray)->maxSubArray([1]) . PHP_EOL;
 echo (new MaximumSubArray)->maxSubArray([5,4,-1,7,8]);

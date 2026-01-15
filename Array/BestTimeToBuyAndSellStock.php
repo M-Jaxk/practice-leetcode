@@ -19,7 +19,6 @@ class BestTimeToBuyAndSellStock
 
         $largestetStock = $smallestStock;
         $foundSmallestStock = false;
-
         for ($j = 0; $j < count($prices); $j++) {
             if ($prices[$j] === $smallestStock && $foundSmallestStock == false) {
                 $foundSmallestStock = true;

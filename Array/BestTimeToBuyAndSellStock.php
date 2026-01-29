@@ -12,7 +12,7 @@ class BestTimeToBuyAndSellStock
 
         $smallestStock = $prices[0];
 
-        for ($i = 0; $i < count($prices); $i++) { //[7,1,5,3,6,4]
+            for ($i = 0; $i < count($prices); $i++) { //[7,1,5,3,6,4]
             if ($prices[$i] < $smallestStock)
                 $smallestStock = $prices[$i];
         }

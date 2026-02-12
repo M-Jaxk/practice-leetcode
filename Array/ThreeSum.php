@@ -3,6 +3,9 @@ declare(strict_types=1);
 class ThreeSum{
 public function execute(array $nums)
     {
+        if(count($nums) < 3)
+            return [];
+        
         $result = [];
         $n = count($nums);//6
         sort($nums);//[-4,-1,-1,0,1,2]
@@ -12,7 +15,7 @@ public function execute(array $nums)
                 continue;
             }
             
-            $left = $i + 1;
+            $left = $i + 1;//i=0,1,2
             $right = $n - 1;//5 
             
             while ($left < $right) {//1<5
@@ -30,7 +33,7 @@ public function execute(array $nums)
                     
                     $left++;
                     $right--;
-                } elseif ($sum < 0) {
+                } elseif ($sum < 0) {//-3 < 0 
                     $left++;
                 } else {
                     $right--;

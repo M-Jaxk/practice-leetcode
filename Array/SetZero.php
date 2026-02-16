@@ -1,10 +1,11 @@
 <?php
 declare(strict_types=1);
 class SetZero{
+    //[[1,1,1],[1,0,1],[1,1,1]]
     public function execute(array $matrix): array{
         $m = count($matrix);
         $n = count($matrix[0]);
-        
+       
         $firstRowZero = false;
         $firstColZero = false;
         

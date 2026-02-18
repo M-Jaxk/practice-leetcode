@@ -16,12 +16,12 @@ class SetZero{
             }
         }
         
-        for($i = 0; $i < $m; $i++){
-            if($matrix[$i][0] === 0){
-                $firstColZero = true;
-                break;
+            for($i = 0; $i < $m; $i++){
+                if($matrix[$i][0] === 0){
+                    $firstColZero = true;
+                    break;
+                }
             }
-        }
         
         for($i = 1; $i < $m; $i++){
             for($j = 1; $j < $n; $j++){

@@ -24,3 +24,4 @@ class MaxArea{
 }
 
 print_r((new MaxArea())->execute( [1,8,6,2,5,4,8,3,7]));
+print_r((new MaxArea())->execute( [1,1]));

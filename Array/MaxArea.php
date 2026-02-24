@@ -6,22 +6,22 @@ class MaxArea{
         $left = 0;
         $right = count($num) - 1;
         $maxArea = 0;
-        
-        while ($left < $right) {
+
+        while($left<$right){
             $width = $right - $left;
-            $height = min($num[$left], $num[$right]);
-            $maxArea = max($maxArea, $width * $height);
-            
-            if ($num[$left] < $num[$right]) {
-                $left++;
-            } else {
-                $right--;
+            $height = min($num[$left],$num[$right]); 
+            $maxArea = max($maxArea,($width*$height));
+
+            if($num[$left] < $num[$right]){
+                $left ++;
+            }else{
+                $right --;
             }
         }
-        
+
         return $maxArea;
     }
 }
 
-print_r((new MaxArea())->execute( [1,8,6,2,5,4,8,3,7]));
-print_r((new MaxArea())->execute( [1,1]));
+echo((new MaxArea())->execute( [1,8,6,2,5,4,8,3,7])).PHP_EOL;
+echo((new MaxArea())->execute( [1,1]));

@@ -3,8 +3,11 @@ declare(strict_types=1);
 class MissingNumber{
     public function execute(array $num):int
     {
-        $missingNo = count($num);
-        for ($i = 0; $i < count($num); $i++) {
+        //a ^ b ^ a (XOR)[Doesn't metter order]
+        //a ^ a ^ b (XOR)
+        //b
+        $missingNo = count($num);//2^1^1
+        for ($i=0; $i < count($num); $i++) { 
             $missingNo ^= $i ^ $num[$i];
         }
         return $missingNo;

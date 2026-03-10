@@ -4,31 +4,24 @@ declare(strict_types=1);
 
 class BestTimeToBuyAndSellStock
 {
-
-    public function maxProfit(array $prices): float|int|string
+    //[7, 1, 5, 3, 6, 4]
+    public function maxProfit(array $prices): int
     {
-        if (count($prices) === 0)
-            return "Empty Array";
+        if(empty($prices)) return 0;
 
-        $smallestStock = $prices[0];
-
-            for ($i = 0; $i < count($prices); $i++) { //[7,1,5,3,6,4]
-            if ($prices[$i] < $smallestStock)
-                $smallestStock = $prices[$i];
-        }
-        $largestetStock = $smallestStock;
-        $foundSmallestStock = false;
-        for ($j = 0; $j < count($prices); $j++) {
-            if ($prices[$j] === $smallestStock && $foundSmallestStock == false) {
-                $foundSmallestStock = true;
-                continue;
-            }
-
-            if ($foundSmallestStock == true && $prices[$j] > $largestetStock ) {
-                $largestetStock = $prices[$j];
+        $minPrice = $prices[0];
+        $maxProfit = 0;
+        for ($i=0; $i < count($prices); $i++) { 
+            if($prices[$i] < $minPrice){
+                $minPrice = $prices[$i];
+            }else{
+                $curProfit = $prices[$i] - $minPrice;
+                if($curProfit > $maxProfit){
+                    $maxProfit = $curProfit;
+                }
             }
         }
-        return $largestetStock - $smallestStock;
+        return $maxProfit;
     }
 }
 

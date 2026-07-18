@@ -9,7 +9,7 @@ class BestTimeToBuyAndSellStock
     {
         if(empty($prices)) return 0;
 
-        $minPrice = $prices[0];
+        $minPrice = $prices[0];//7
         $maxProfit = 0;
         for ($i=0; $i < count($prices); $i++) { 
             if($prices[$i] < $minPrice){

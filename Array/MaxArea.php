@@ -7,10 +7,10 @@ class MaxArea{
         $right = count($num) - 1;
         $maxArea = 0;
 
-        while($left<$right){
-            $width = $right - $left;
-            $height = min($num[$left],$num[$right]); 
-            $maxArea = max($maxArea,($width*$height));
+        while($left<$right){ //0<8,1<8,2<8
+            $width = $right - $left; //8-0=8
+            $height = min($num[$left],$num[$right]);//min(1,7)=1
+            $maxArea = max($maxArea,($width*$height));//8
 
             if($num[$left] < $num[$right]){
                 $left ++;

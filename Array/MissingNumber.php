@@ -8,7 +8,7 @@ class MissingNumber{
         //b
         $missingNo = count($num);//2^1^1
         for ($i=0; $i < count($num); $i++) { 
-            $missingNo ^= $i ^ $num[$i];
+            $missingNo ^= $i ^ $num[$i];//=3^0^3,  0
         }
         return $missingNo;
     }

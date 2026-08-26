@@ -14,7 +14,6 @@ class LongestSubstring {
             set.add(s[right]);//set[a,b,b]
             max = Math.max(max, right - left + 1);//1,2,3,3,3,3,3
         }
-        console.log(set);
         return max;
     }
 }

@@ -16,4 +16,7 @@ class TwoSum {
         return [];
     }
 }
+
+//time-complexity => O(n)
+//space-complevity=> O(n)
 console.log(new TwoSum().execute([2,1, 7, 8, 11, 15], 9));

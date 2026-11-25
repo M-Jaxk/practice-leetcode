@@ -1,0 +1,18 @@
+class MergeInterval {
+  execute(intervals = []) {
+    let merged = [];
+    intervals.sort((a,b)=>a[0]-b[0])
+    for(let interval of intervals){
+      if(merged.length === 0 || merged[merged.length-1][1] < interval[0]){
+        merged.push(interval);
+      }else{
+        merged[merged.length-1][1]=Math.max(merged[merged.length-1][1],interval[1])
+      }
+    }
+    return merged;
+  }
+}
+
+console.log(new MergeInterval().execute([[1, 3], [2, 6], [8, 10], [15, 18]]));
+console.log(new MergeInterval().execute([[1, 4], [4, 5]]));
+console.log(new MergeInterval().execute([[4, 7], [1, 4]]));

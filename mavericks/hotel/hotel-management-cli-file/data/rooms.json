@@ -1,0 +1,12 @@
+{
+  "nextId": 2,
+  "items": [
+    {
+      "id": 1,
+      "name": "room1",
+      "capacity": 3,
+      "location": "floor1",
+      "createdAt": "2026-11-23T09:14:31.701Z"
+    }
+  ]
+}

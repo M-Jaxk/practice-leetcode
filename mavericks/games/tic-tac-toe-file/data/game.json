@@ -1,0 +1,17 @@
+{
+  "board": [
+    "X",
+    "O",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "currentPlayer": "X",
+  "status": "playing",
+  "winner": null,
+  "moves": 2
+}

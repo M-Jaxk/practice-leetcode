@@ -1,8 +1,9 @@
 class ReverseList {
-    // [1,2,3,4,5] → [5,4,3,2,1]
+    // [1,2,3,4,5] → 1->null
     execute(head) {
         let prev = null;
         let current = head;//1,2
+        console.log("current",current);
 
         while (current) {
             const next = current.next;//2
@@ -32,4 +33,5 @@ node2.next = node3;
 node3.next = node4;
 node4.next = null;
 
+// console.log(node1);
 console.log(new ReverseList().execute(node1));

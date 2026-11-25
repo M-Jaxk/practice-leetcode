@@ -1,20 +1,27 @@
 class LevelOrderTraversal {
-    // [3,9,20,null,null,15,7] → [[3],[9,20],[15,7]]
     execute(root) {
         if (!root) return [];
 
         const result = [];
         const queue = [root];
+        let head = 0;
 
-        while (queue.length) {
+        while (head < queue.length) {
             const level = [];
-            const len = queue.length;
+            const len = queue.length - head;
 
             for (let i = 0; i < len; i++) {
-                const node = queue.shift();
+                const node = queue[head++];
+
                 level.push(node.val);
-                if (node.left) queue.push(node.left);
-                if (node.right) queue.push(node.right);
+
+                if (node.left) {
+                    queue.push(node.left);
+                }
+
+                if (node.right) {
+                    queue.push(node.right);
+                }
             }
 
             result.push(level);
@@ -23,6 +30,8 @@ class LevelOrderTraversal {
         return result;
     }
 }
+//time - O(N)
+//space - O(N)
 
 const tree = {
     val: 3,

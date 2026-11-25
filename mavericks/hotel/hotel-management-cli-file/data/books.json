@@ -1,0 +1,17 @@
+{
+  "nextId": 2,
+  "items": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "title": "holiday",
+      "organizer": "jaxk",
+      "date": "2026-10-23",
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "status": "CONFIRMED",
+      "createdAt": "2026-11-23T09:15:37.764Z",
+      "cancelledAt": null
+    }
+  ]
+}
